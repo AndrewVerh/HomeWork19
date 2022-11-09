@@ -17,9 +17,13 @@ public class Main {
         people.add(pendal);
         people.add(givi);
 
-        PersonsSurnameLenthComparator comparatorSurname = new PersonsSurnameLenthComparator();
-        people.sort(comparatorSurname);
-        System.out.println(people);
+//        PersonsSurnameLenthComparator comparatorSurname = new PersonsSurnameLenthComparator();
+//        people.sort(comparatorSurname);
+//        System.out.println(people);
+
+
+
+        
     }
 }
 
