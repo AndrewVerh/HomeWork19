@@ -17,14 +17,20 @@ public class Main {
         people.add(pendal);
         people.add(givi);
 
-        PersonsSurnameLenthComparator comparatorSurname = new PersonsSurnameLenthComparator();
+        Comparator<Person> comparatorSurname = (o1, o2) -> {
+            if (o1.getSurname().equals(o2.getSurname())) {
+                return Integer.compare(o1.getAge(), o2.getAge());
+            }
+            return Integer.compare(o1.countWordsSurname(o1.getSurname()), o2.countWordsSurname(o2.getSurname()));
+        };
+
         people.sort(comparatorSurname);
         System.out.println(people);
+
     }
 }
 
 
-// из удаленного класса компаратора
 //import java.util.Comparator;
 //
 //public class PersonsSurnameLenthComparator implements Comparator<Person> {
@@ -36,5 +42,4 @@ public class Main {
 //        }
 //        return Integer.compare(o1.countWordsSurname(o1.getSurname()), o2.countWordsSurname(o2.getSurname()));
 //    }
-//
 //}
